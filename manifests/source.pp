@@ -102,7 +102,7 @@
 #
 define apt::source (
   Enum['list', 'sources'] $source_format                 = 'list',
-  Array[Enum['deb','deb-src'], 1, 2] $types              = ['deb'],
+  Array[Enum['deb','deb-src'], 1, 2] $types              = ['deb'], # deb822
   Optional[Variant[String, Array[String]]] $location     = undef,
   Boolean $enabled                                       = true, # deb822
   String $comment                                        = $name,
