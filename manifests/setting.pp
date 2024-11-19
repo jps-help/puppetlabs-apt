@@ -49,7 +49,7 @@ define apt::setting (
     }
   }
 
-  if ($setting_type == 'list') or ($setting_type == 'pref') or ($setting_type == 'sources') {
+  if $setting_type in ['list', 'pref', 'sources'] {
     $_priority = ''
   } else {
     $_priority = $priority
